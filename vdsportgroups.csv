@@ -1,0 +1,7 @@
+vdsName,PortGroup,VlanID
+pod-020-vcf-mgmt-cluster-1-vds01,bch-vds-test-01,11
+pod-020-vcf-mgmt-cluster-1-vds01,bch-vds-test-02,12
+pod-020-vcf-mgmt-cluster-1-vds01,bch-vds-test-03,13
+pod-020-vcf-mgmt-cluster-1-vds02,bch-vds-test-04,14
+pod-020-vcf-mgmt-cluster-1-vds02,bch-vds-test-05,15
+pod-020-vcf-mgmt-cluster-1-vds02,bch-vds-test-06,16

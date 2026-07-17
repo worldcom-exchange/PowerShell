@@ -1,0 +1,7 @@
+vSwitchName,PortGroup,VlanID
+vSwitch0,bch-test-01,11
+vSwitch0,bch-test-02,12
+vSwitch0,bch-test-03,13
+vSwitch1,bch-test-04,14
+vSwitch1,bch-test-05,15
+vSwitch1,bch-test-06,16
