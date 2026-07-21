@@ -21,6 +21,9 @@ foreach ($VMhost in $VMhosts) {
 
         $vSwitch = New-VirtualSwitch -VMHost $VMhost -Name $vss
         Write-Host "  [+] Created vSwitch: $vss" -ForegroundColor Green
+        $vSwitchName = vSwitch0
+        $pnic = vmnic1
+        Get-VirtualSwitch -VMHost $VMhost -Name $vSwitchName | Add-VirtualSwitchPhysicalNetworkAdapter -PhysicalNic $pnic
             #create portgroups on standard switch
             foreach ($row in $csvSwitch.Group) {
                 $pg = $row.PortGroup
