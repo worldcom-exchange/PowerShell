@@ -19,3 +19,5 @@ $csv | ForEach-Object {
         Write-Host "Created: $($_.PortGroup) on $($_.vdsName)" -ForegroundColor Green
     }
 }
+
+Disconnect-VIServer -Confirm:$false
