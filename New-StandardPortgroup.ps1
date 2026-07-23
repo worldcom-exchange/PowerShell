@@ -34,3 +34,5 @@ foreach ($VMhost in $VMhosts) {
             }
     }
 }
+
+Disconnect-VIServer -Confirm:$false
