@@ -4,6 +4,7 @@ $creds = Get-Credential
 Connect-VIServer $vcenter -Credential $creds
 
 $cluster = Read-host "What is the name of your cluster?"
+$pnic = Read-Host "which vmnic would you like to add to the Standard Switch? Expecting a response of vmnicx. "
 $csv = Import-Csv "C:\users\mhargreaves\Downloads\portgroups.csv"
 $VMhosts = Get-Cluster -Name $cluster | Get-VMHost
 
@@ -22,7 +23,6 @@ foreach ($VMhost in $VMhosts) {
         $vSwitch = New-VirtualSwitch -VMHost $VMhost -Name $vss
         Write-Host "  [+] Created vSwitch: $vss" -ForegroundColor Green
         $vSwitchName = vSwitch0
-        $pnic = vmnic1
         Get-VirtualSwitch -VMHost $VMhost -Name $vSwitchName | Add-VirtualSwitchPhysicalNetworkAdapter -PhysicalNic $pnic
             #create portgroups on standard switch
             foreach ($row in $csvSwitch.Group) {
